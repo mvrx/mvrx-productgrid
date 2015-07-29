@@ -1,7 +1,16 @@
 normalize()
 
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+
 body {
 	gs("fluid");
+	overflow: auto;
 }
 
 .container {
@@ -12,6 +21,11 @@ body {
 
 .row {
 	row ();
+	&:after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
 }
 
 .column.sixth {
@@ -46,5 +60,5 @@ body {
 	.column.two-thirds,
 	.column.full {
 		col (12);
-		}
+	}
 }
