@@ -9,7 +9,7 @@ gulp.task('compress', function () {
 	gulp.src('./client/styles/base.styl')
 		.pipe(stylus({
 			use: koutoSwiss(),
-      compress: false
+      compress: true
     }))
 		.pipe(gulp.dest('./dist/css'));
 });

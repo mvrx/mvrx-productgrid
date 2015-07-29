@@ -13,14 +13,44 @@
 
 .product-block {
 	img {
-		transition: opacity 250ms ease-in-out;
+		transition: transform 150ms ease-in-out;
 		width: 100%;
 		height: auto;
-		opacity: 100%;
+		opacity: 1;
+		transform:scale(0.90);
+	    -ms-transform:scale(0.90); /* IE 95 */
+	    -moz-transform:scale(0.90); /* Firefox */
+	    -webkit-transform:scale(0.90); /* Safari and Chrome */
+	    -o-transform:scale(0.90); /* Opera */
 	}
 	&:hover {
 		img {
-			opacity: 0.5;
+			transform:scale(1);
+		    -ms-transform:scale(1); /* IE 9 */
+		    -moz-transform:scale(1); /* Firefox */
+		    -webkit-transform:scale(1); /* Safari and Chrome */
+		    -o-transform:scale(1); /* Opera */
+		}
+	}
+}
+
+.product-name {
+	text-align: center;
+}
+
+.product-price {
+	text-align: center;
+}
+
+.pagination {
+	padding: 0;
+	text-align: center;
+	li {
+		margin-right: 1em;
+		list-style: none;
+		display: inline-block;
+		&:last-child {
+			margin-right: 0;
 		}
 	}
 }
