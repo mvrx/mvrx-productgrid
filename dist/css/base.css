@@ -266,6 +266,11 @@ body {
     margin: 0 0.416666666666666%;
   }
 }
+#header {
+  height: 200px;
+  background-color: #ff008a;
+  margin-bottom: 1em;
+}
 .product-row {
   padding: 1em 0;
 }
