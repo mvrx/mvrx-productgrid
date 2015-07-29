@@ -1,0 +1,50 @@
+normalize()
+
+body {
+	gs("fluid");
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1280px;
+	width: 90%;
+}
+
+.row {
+	row ();
+}
+
+.column.sixth {
+	col (2);
+}
+
+.column.third {
+	col (4);
+}
+
+.column.fourth {
+	col (3);
+}
+
+.column.half {
+	col (6);
+}
+
+.column.two-thirds {
+	col (8);
+}
+
+.column.full {
+	col (12);
+}
+
+@media screen and (max-width: 40em) {
+	.column.sixth,
+	.column.third,
+	.column.fourth,
+	.column.half,
+	.column.two-thirds,
+	.column.full {
+		col (12);
+		}
+}
