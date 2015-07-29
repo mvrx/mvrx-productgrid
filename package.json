@@ -19,6 +19,7 @@
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-stylus": "^2.0.5",
+    "gulp-watch": "^4.3.4",
     "kouto-swiss": "^0.11.13"
   }
 }

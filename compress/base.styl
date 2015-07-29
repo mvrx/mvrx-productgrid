@@ -1,0 +1,20 @@
+@import "../../../node_modules/kouto-swiss"
+@import "_includes/grid"
+
+.product-row {
+	padding: 1em 0;
+}
+
+.product-block {
+	img {
+		transition: opacity 250ms ease-in-out;
+		width: 100%;
+		height: auto;
+		opacity: 100%;
+	}
+	&:hover {
+		img {
+			opacity: 0.5;
+		}
+	}
+}

@@ -3,6 +3,7 @@
 var gulp = require('gulp');
 var stylus = require('gulp-stylus');
 var koutoSwiss = require('kouto-swiss');
+var watch = require('gulp-watch');
 
 gulp.task('compress', function () {
 	gulp.src('./client/styles/base.styl')
@@ -13,4 +14,8 @@ gulp.task('compress', function () {
 		.pipe(gulp.dest('./dist/css'));
 });
 
-gulp.task('default', ['compress']);
+gulp.task('watch', function() {
+    gulp.watch('./client/styles/**/*.styl', ['compress']);
+});
+
+gulp.task('default', ['watch', 'compress']);
