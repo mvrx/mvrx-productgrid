@@ -1,5 +1,7 @@
 @import "../../../node_modules/kouto-swiss"
+@import "_includes/variables"
 @import "_includes/grid"
+@import "_includes/mixins"
 
 #header {
 	height: 200px;
@@ -12,25 +14,43 @@
 }
 
 .product-block {
+	position: relative;
+	border: 1px solid white;
+	padding-bottom: 2em;
 	img {
-		transition: transform 150ms ease-in-out;
 		width: 100%;
 		height: auto;
-		opacity: 1;
-		transform:scale(0.90);
-	    -ms-transform:scale(0.90); /* IE 95 */
-	    -moz-transform:scale(0.90); /* Firefox */
-	    -webkit-transform:scale(0.90); /* Safari and Chrome */
-	    -o-transform:scale(0.90); /* Opera */
 	}
 	&:hover {
-		img {
-			transform:scale(1);
-		    -ms-transform:scale(1); /* IE 9 */
-		    -moz-transform:scale(1); /* Firefox */
-		    -webkit-transform:scale(1); /* Safari and Chrome */
-		    -o-transform:scale(1); /* Opera */
+		border: 1px solid $light-grey;
+		.quickshop-block {
+			display: inline-block;
 		}
+	}
+}
+
+.quickshop-block {
+	display: none;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+}
+
+.quickshop {
+	font-size: 10px;
+	padding: 1em 2em;
+	width: 100%;
+	text-transform: uppercase;
+	letter-spacing: .0875em;
+	color: white;
+	border-top: 1px solid $light-grey;
+	background-color: $secondary;
+	&:hover {
+		border: none;
+		color: white;
+		border-top: 1px solid $light-grey;
+		background-color: lighten($secondary, 20);
 	}
 }
 
